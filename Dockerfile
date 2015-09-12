@@ -21,8 +21,6 @@ RUN \
   rm -rf /tmp/node-* && \
   npm install -g npm && \
   printf '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
-  
-  npm config set registry https://registry.npm.taobao.org
 
 # Define working directory.
 WORKDIR /data
