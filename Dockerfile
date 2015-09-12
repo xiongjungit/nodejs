@@ -13,12 +13,12 @@ RUN \
   wget http://nodejs.org/dist/node-0.1.10.tar.gz && \
   tar xvzf node-0.1.10.tar.gz && \
   rm -f node-0.1.10.tar.gz && \
-  cd node-v* && \
+  cd node-* && \
   ./configure && \
   CXX="g++ -Wno-unused-local-typedefs" make && \
   CXX="g++ -Wno-unused-local-typedefs" make install && \
   cd /tmp && \
-  rm -rf /tmp/node-v* && \
+  rm -rf /tmp/node-* && \
   npm install -g npm && \
   printf '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
 
