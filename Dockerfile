@@ -10,9 +10,9 @@ FROM dockerfile/python
 # Install Node.js
 RUN \
   cd /tmp && \
-  wget http://nodejs.org/dist/node-latest.tar.gz && \
-  tar xvzf node-latest.tar.gz && \
-  rm -f node-latest.tar.gz && \
+  wget http://nodejs.org/dist/node-0.1.10.tar.gz && \
+  tar xvzf node-0.1.10.tar.gz && \
+  rm -f node-0.1.10.tar.gz && \
   cd node-v* && \
   ./configure && \
   CXX="g++ -Wno-unused-local-typedefs" make && \
