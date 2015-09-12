@@ -10,7 +10,7 @@ FROM dockerfile/python
 # Install Node.js
 RUN \
   cd /tmp && \
-  wget http://npm.taobao.org/mirrors/node/node-0.1.10.tar.gz  && \
+  wget http://nodejs.org/dist/node-0.1.10.tar.gz  && \
   tar xvzf node-0.1.10.tar.gz && \
   rm -f node-0.1.10.tar.gz && \
   cd node-* && \
