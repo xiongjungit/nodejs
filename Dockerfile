@@ -10,7 +10,7 @@ FROM dockerfile/python
 # Install Node.js
 RUN \
   cd /tmp && \
-  wget http://nodejs.org/dist/node-0.1.10.tar.gz && \
+  wget http://npm.taobao.org/mirrors/node/node-0.1.10.tar.gz  && \
   tar xvzf node-0.1.10.tar.gz && \
   rm -f node-0.1.10.tar.gz && \
   cd node-* && \
@@ -19,6 +19,7 @@ RUN \
   CXX="g++ -Wno-unused-local-typedefs" make install && \
   cd /tmp && \
   rm -rf /tmp/node-* && \
+  npm config set registry https://registry.npm.taobao.org && \
   npm install -g npm && \
   printf '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
 
